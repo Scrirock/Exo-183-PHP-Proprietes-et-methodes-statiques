@@ -17,3 +17,15 @@
  *
  * 5. Invoquez la méthode vous permettant de récupérer le nombre total d'abonnements aux plateformes VOD de manière à afficher le nombre total d'abonnements.
  */
+
+    require "./classes/VOD.php";
+
+    $netflix = new VOD(["film1", "film2", "film3", "film4", "film5"], 9.99);
+    $prime = new VOD(["film1", "film2", "film3", "film4", "film5"], 14.99);
+
+    $rng = rand(4, 54);
+    for($i = 0; $i<$rng; $i++){
+        VOD::addSubCount();
+    }
+
+    echo VOD::getSubCount();
